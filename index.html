@@ -157,19 +157,19 @@
   .faq-a { font-size: 0.875rem; font-weight: 200; color: var(--muted); line-height: 1.8; }
 
   /* NEWSLETTER */
-  .newsletter { position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; }
+  .email-signup { position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; }
   .newsletter-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.22) saturate(0.5); }
   .newsletter-content { position: relative; z-index: 1; padding: 5rem 2rem; max-width: 600px; }
   .nl-kicker { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
-  .nl-title { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .signup-heading { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
   .nl-title em { font-style: italic; color: var(--rose); }
-  .nl-sub { font-size: 0.9rem; font-weight: 200; color: rgba(240,235,227,0.6); line-height: 1.7; margin-bottom: 2.5rem; }
-  .nl-form { display: flex; max-width: 440px; margin: 0 auto; }
-  .nl-input { flex: 1; background: rgba(240,235,227,0.1); border: 1px solid rgba(240,235,227,0.2); border-right: none; color: var(--white); font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 300; padding: 0.9rem 1.25rem; outline: none; transition: border-color 0.2s; }
-  .nl-input::placeholder { color: rgba(240,235,227,0.35); }
-  .nl-input:focus { border-color: var(--rose); }
-  .nl-btn { background: var(--rose); color: var(--white); border: none; padding: 0.9rem 1.75rem; font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-  .nl-btn:hover { background: var(--gold); }
+  .signup-desc { font-size: 0.9rem; font-weight: 200; color: rgba(240,235,227,0.6); line-height: 1.7; margin-bottom: 2.5rem; }
+  .signup-form { display: flex; max-width: 440px; margin: 0 auto; }
+  .signup-field { flex: 1; background: rgba(240,235,227,0.1); border: 1px solid rgba(240,235,227,0.2); border-right: none; color: var(--white); font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 300; padding: 0.9rem 1.25rem; outline: none; transition: border-color 0.2s; }
+  .signup-field::placeholder { color: rgba(240,235,227,0.35); }
+  .signup-field:focus { border-color: var(--rose); }
+  .signup-button { background: var(--rose); color: var(--white); border: none; padding: 0.9rem 1.75rem; font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .signup-button:hover { background: var(--gold); }
 
   /* FOOTER */
   footer { background: var(--black); border-top: 1px solid var(--faint); padding: 4rem 4rem 2rem; }
@@ -181,7 +181,7 @@
   .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
   .footer-nav a { font-size: 0.82rem; font-weight: 300; color: rgba(240,235,227,0.5); text-decoration: none; transition: color 0.2s; }
   .footer-nav a:hover { color: var(--cream); }
-  .footer-bottom { display: flex; justify-content: space-between; font-size: 0.7rem; font-weight: 300; color: rgba(240,235,227,0.2); letter-spacing: 0.06em; }
+  .footer-base { display: flex; justify-content: space-between; font-size: 0.7rem; font-weight: 300; color: rgba(240,235,227,0.2); letter-spacing: 0.06em; }
 
   /* ANIMATIONS */
   @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
@@ -402,15 +402,15 @@
   </div>
 </section>
 
-<section class="newsletter">
+<section class="email-signup">
   <img class="newsletter-bg" src="https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?w=1400&q=80&auto=format&fit=crop" alt="San Diego romantic date night newsletter couples">
   <div class="newsletter-content">
     <div class="nl-kicker">Never run out of ideas</div>
-    <h2 class="nl-title">Weekly <em>romance</em><br>in your inbox</h2>
-    <p class="nl-sub">New restaurants, seasonal experiences, and date night ideas delivered every Thursday. Because the best dates are the ones you actually plan.</p>
-    <div class="nl-form">
-      <input type="email" class="nl-input" placeholder="your@email.com">
-      <button class="nl-btn">Subscribe</button>
+    <h2 class="signup-heading">Weekly <em>romance</em><br>in your inbox</h2>
+    <p class="signup-desc">New restaurants, seasonal experiences, and date night ideas delivered every Thursday. Because the best dates are the ones you actually plan.</p>
+    <div class="signup-form">
+      <input type="email" class="signup-field" placeholder="your@email.com">
+      <button class="signup-button">Subscribe</button>
     </div>
   </div>
 </section>
@@ -450,7 +450,7 @@
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-base">
     <span>© 2025 SanDiegoDateNight.com — Romance in America's Finest City</span>
     <span>Made with ♥ in San Diego</span>
   </div>
